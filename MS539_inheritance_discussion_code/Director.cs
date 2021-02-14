@@ -9,10 +9,9 @@ namespace MS539_inheritance_discussion_code
     public class Director
     {
 
-        public Part Construct(Builder builder,string[] parameters)
+        public bool Construct(Builder builder,string[] parameters)
         {
-            Part result = null;
-            result = builder.BuildPart(parameters);
+            bool result = builder.Construct(parameters);
             return result;
         }
 

@@ -34,7 +34,6 @@ namespace MS539_inheritance_discussion_code
 
         public override void Initialize()
         {
-            base.Initialize();
             Automatic = false;
             Manual = false;
         }

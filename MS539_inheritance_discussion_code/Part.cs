@@ -112,7 +112,7 @@ namespace MS539_inheritance_discussion_code
         {
             set
             {
-                Name = value;
+                _Name = value;
             }
 
             get

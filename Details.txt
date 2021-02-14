@@ -1,0 +1,58 @@
+MS539 Discussion Inheritance
+Roderick DeValcourt
+2/13/2021
+
+Inheritance is a object oriented programming construct where you can model and
+build objects that are closely related in some manner.
+
+I have created a sample program found at the git hub repository link at the end
+of this discussion.
+
+I have also created a UML diagram that is in the solution folder as well as this
+file detailing this assignment.
+
+Discussion:
+
+1. I have created a Part class with constructors, attributes and methods.  This class
+has the attributes of Year, Make, Model, Name properties to set/get the private member variables
+_Year, _Make, _Model and _Name.
+
+The public method Initialize() allows for these attributes to be blanked out to
+"" or String.Empty which allocates the memory required for the object
+attributes.
+
+The public virtual method FormatDisplayString returns a string formatted for display purposes with Part attributes
+Year, Make, Model and Name.
+
+2. I have created another object called Transmission which inherits from the Part object and adds additional attributes
+for Automatic and Manual as booleans.  Automatic = True means it's an automatic transmission type.  Manual = true indicates
+its a manual transmission type.
+
+The public method Initialize() allows for these attributes to be blanked out to
+"" or String.Empty which allocates the memory required for the object
+attributes by calling the base object Initialize method.  It also sets Automatic and Manual to
+the value of False.
+
+The public virtual method FormatDisplayString returns a string formatted for display purposes with Part attributes
+Year, Make, Model, Name, Automatic and Manual.
+
+3. I have created another object called Engine which inherits from the Part object and adds an additional attribute
+for Cylinder.  This integer attribute is needed to indicate how many cylinders the engine has e.g. 1, 2, 4, 6, 8 or 12.
+
+4. I have also used a design pattern called Builder which has a concreate director and an abstract builder for PartBuilder,
+TransmissionBuilder and EngineBuilder.
+
+I realize the design pattern is not part of the requirement but I wanted to use
+a standard way to have a builder/director scheme for my parts.  Why reinvent
+that wheel?  I used a gang of four pattern described at
+https://dofactory.com/products/dofactory-net in the "Gang of Four Design
+Patterns." section of that link.  This is a product that i purchased to help me
+whenever I need it but suffice to say I didn't design this pattern that I am
+utilizing.
+
+
+git hub repository:
+https://github.com/roddeval/inheritance
+
+UML Diagram:
+
